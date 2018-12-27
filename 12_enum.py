@@ -25,6 +25,7 @@ if __name__ == "__main__":
         enum_class._member_map_ = OrderedDict()      # name->value map
     ''''
     for name,member in Month.__members__.items():
+        #想把 __memberes__拆分来看，看看里面是什么
         print(name,'=>',member,',',member.value)
     for name,member in Month.__members__:
         print(name,'=>',member,',',member.value)
