@@ -8,7 +8,7 @@
     SyntaxError: Missing parentheses in call to 'print'. Did you mean print(int 'Macros:')?
     原因是python3.x和Python2.x兼容的问题
 '''
-from multiprocessing import Process
+from multiprocess import Process
 import os
 
 def run_process(name):
