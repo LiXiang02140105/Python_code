@@ -8,13 +8,16 @@
     SyntaxError: Missing parentheses in call to 'print'. Did you mean print(int 'Macros:')?
     原因是python3.x和Python2.x兼容的问题
 '''
-from multiprocessing import Process
+from multiprocessing.process import BaseProcess
 import os
 
 def run_process(name):
     print("子进程为：%s, %s" % (name,os.getpid()))
 
 if __name__ == "__main__":
-    print("父进程为：%s, %s" % (name, os.getpid()))
-
-    child = Process(target)
+    print("父进程为： %s" %  os.getpid())
+    child = BaseProcess(target = run_process, args = ('test',))
+    print("子进程开始！")
+    child.start()
+    child.join()
+    print("子进程结束！")
